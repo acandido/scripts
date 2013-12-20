@@ -1,7 +1,7 @@
 #!/usr/bin/python  
 import xmltv
 import MySQLdb
-filename = '/PATH/tvguidesat.xml'
+filename = '/PATH/tvguide.xml'
 db = MySQLdb.connect(host="localhost",user="USER",passwd="PASSWORD",db="mythconverg")
 cur = db.cursor() 
 channels = xmltv.read_channels(open(filename, 'r'))
