@@ -101,6 +101,7 @@ def read_lamedb():
 	fd.close()
 	# Start writing output
 	for xml_channel in xml_channels:
+		# Check your XML file: this ONLY works if the 2nd display name is the numerical SID
 		xml_sid = xml_channel['display-name'][1][0]
 		if combined_dict.has_key(xml_sid):
 			fm.write("<channel id=\"" + xml_channel['id'] + "\">" + combined_dict[xml_sid][0][0] + "</channel>" + " <!-- " + combined_dict[xml_sid][0][1] + " - " + xml_sid + " -->" + "\n")
